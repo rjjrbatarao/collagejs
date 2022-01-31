@@ -5,6 +5,6 @@ Json to html builder
 * Automated or Event driven Lazyloading
 * Server side templating
 * Direct integration from Firebase, MongoDb, GrapHql, Mysql or any Database that can store json
-* Database for Frontend
+* Frontend from Database (FFD)
 * Lightweight
 * Canbe used as library for popular framework like React
