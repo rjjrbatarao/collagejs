@@ -6,6 +6,6 @@ used React and Preact as web ui of esp8266 and esp32 but updating their gui is a
 * Event or Manual driven Lazyloading
 * Server side templating
 * Direct integration from Firebase, MongoDb, GrapHql, Mysql or any Database that can store json
-* Frontend from Database (FFD)
+* Frontend from Database (FFD) Frontend from Backend (FFB)
 * Super lightweight
 * Canbe used as library for popular framework like Reactjs
