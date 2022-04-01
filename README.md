@@ -47,7 +47,7 @@ basic collagejs element structure, you can add more element object on the array
 }]
 ```
 ```
-  e - element which value composed of keys t, a, and b,
+  e - element object which value composed of keys t, a, and b,
   t - tag where value is any valid html tag ie div,span,ul,script etc
   a - attribute where value is object with any valid html attribute as key, - must be rewritten as _ ie. data-xxx to data_xxx
       any attribute requiring multiple values can be array or single string like class: ["container","mb-2"] or class: "container mb-2"
