@@ -60,7 +60,7 @@ which will be converted to
   b - body - where value can be string or element object and can be infinitely nested with another element object
 ```
 ## Nesting
-Element nesting is possible inside b key or the body or the element object.
+Element nesting are possible inside b key or the body or the element object.
 ```html
 [
         {
