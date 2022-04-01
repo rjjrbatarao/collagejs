@@ -99,8 +99,18 @@ Element can be javascript as well ie., functions as string will be executed insi
 <div id="element2"></div>
 <script>
   const Collage = collagejs;
+  var json = {
+    e: {
+            t: "div",
+            a: {
+              class: ["container", "m-4", "p-4", "text-danger"],
+              style: ["background-color:yellow;"],
+            },
+            b: "No need to add id on",      
+    }
+  }
   let el = new Collage("element", json);
-  let el2 = new Collage("element2", json);
+  let el2 = new Collage("element2", json); // this could be another json 
   el.paint;
   el2.paint;
 </script>
