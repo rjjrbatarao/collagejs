@@ -46,12 +46,18 @@ basic collagejs element structure, you can add more element object on the array
   }
 }]
 ```
+which will be converted to
+```html
+<div class="container mb-2" style="background-color:red">
+  this is body text or can be just another element object
+</div>
 ```
-  e - element object which value composed of keys t, a, and b,
-  t - tag where value is any valid html tag ie div,span,ul,script etc
-  a - attribute where value is object with any valid html attribute as key, - must be rewritten as _ ie. data-xxx to data_xxx
+```
+  e - element - object which value composed of keys t, a, and b,
+  t - tag - where value is any valid html tag ie div,span,ul,script etc
+  a - attribute - where value is object with any valid html attribute as key, - must be rewritten as _ ie. data-xxx to data_xxx
       any attribute requiring multiple values can be array or single string like class: ["container","mb-2"] or class: "container mb-2"
-  b - body where value can be string or element object and can be infinitely nested with another element object
+  b - body - where value can be string or element object and can be infinitely nested with another element object
 ```
 ## Nesting
 Element nesting is possible inside b key or the body or the element object.
