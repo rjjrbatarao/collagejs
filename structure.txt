@@ -1,0 +1,30 @@
+element structure
+[
+{
+    tag0 : 
+    {
+        a: {
+            attributes classes id etc .....
+        },
+        b: {
+            tag1 : 
+            {
+                a: {
+                    attributes .....
+                },
+                b: {
+                    tag2: ....
+                }
+            }
+        },
+        {
+            tag3: .....
+        }
+    }
+},
+{
+    tag4: .....
+}
+]
+element block is array, a key are attributes, and b is body
+tagx are div span p a or any valid html tags

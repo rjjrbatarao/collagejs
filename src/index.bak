@@ -1,0 +1,72 @@
+class Collage {
+  constructor(parent_id, data_object) {
+    this.parent = parent_id;
+    this.data = data_object;
+  }
+}
+
+var prev_id = "app";
+/*
+Element builder for the collagejs json format e,t,a,b keys short for etab
+Create attributes specified in json as 'a' key
+*/
+function makeElement(parent, obj) {
+  var at_k = Object.keys(obj.a);
+  var at_v = Object.values(obj.a);
+  var el = document.createElement(obj.t);
+  at_k.forEach((item, index) => {
+    if (Array.isArray(at_v[index])) {
+      el.setAttribute(at_k[index], at_v[index].join(" "));
+    } else {
+      if (item == "id") {
+        prev_id = at_v[index];
+      }
+      if (at_k[index].includes("_")) {
+        var rep_k = at_k[index].replace("_", "-"); // for data-*
+        el.setAttribute(rep_k, at_v[index]);
+      } else {
+        el.setAttribute(at_k[index], at_v[index]);
+      }
+    }
+  });
+  if (typeof obj.b == "string") {
+    el.innerText = obj.b;
+  }
+  document.getElementById(parent).appendChild(el);
+}
+/*
+The scanJson was a modified flatten code by Bergi stackoverflow answer in Sept 30 2013
+https://stackoverflow.com/questions/19098797/fastest-way-to-flatten-un-flatten-nested-json-objects
+*/
+function scanJson(app, data) {
+  var prev_idx = 0;
+  prev_id = app;
+  function recurse(cur, prop) {
+    if (Object(cur) !== cur) {
+    } else if (Array.isArray(cur)) {
+      for (var i = 0, l = cur.length; i < l; i++) {
+        recurse(cur[i], prop + i);
+      }
+    } else {
+      for (var p in cur) {
+        if (p == "t") {
+          var el_idx = prop.split(".");
+          var el_idx = parseInt(el_idx[0]);
+          if (prev_idx == el_idx) {
+            makeElement(prev_id, cur);
+          } else {
+            prev_idx = el_idx;
+            makeElement(app, cur);
+          }
+        }
+        recurse(cur[p], prop ? prop + "." + p : p);
+      }
+    }
+  }
+  recurse(data, "");
+  return true;
+}
+
+module.exports = {
+  scanJson: (a, o) => scanJson(a, o),
+};

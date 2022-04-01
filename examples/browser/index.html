@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>Test CollageJs</title>
+  </head>
+  <link rel="stylesheet" href="./bootstrap.min.css" />
+  <body>
+    <div id="element"></div>
+    <div id="element2"></div>
+    <script src="./collagejs.js"></script>
+    <script>
+      //collage destructor
+      const Collage = collagejs;
+      //collage element
+      // collage json format [{e: {t:"",a:{}, b: ""}}]
+      // key e , element, value type json object containing t,a, & b
+      // key t , tag, value string representing any valid html tag
+      // key a, attributes, value is json object
+      let json = [
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-2", "text-primary"],
+              style: ["background-color:red;"],
+              data_test: "variable_attribute",
+              id: "mydiv1",
+            },
+            b: {
+              e: {
+                t: "div",
+                a: {
+                  class: ["container", "m-2", "p-2", "text-secondary"],
+                  id: "mydiv2",
+                },
+                b: {
+                  e: {
+                    t: "div",
+                    a: {
+                      class: ["container", "m-2", "p-2", "text-secondary"],
+                      id: "mydiv3",
+                    },
+                    b: {
+                      e: {
+                        t: "div",
+                        a: {
+                          class: ["container", "text-warning"],
+                          style: ["background-color:green;"],
+                          id: "mydiv4",
+                        },
+                        b: "Hello World 1",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-2", "text-info"],
+              style: ["background-color:blue;"],
+              id: "mydiv5",
+            },
+            b: "hellow world 2",
+          },
+        },
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-2"],
+              id: "mydiv6",
+            },
+            b: {
+              e: {
+                t: "div",
+                a: {
+                  class: ["container", "m-2", "p-2", "text-secondary"],
+                  id: "mydiv7",
+                },
+                b: "testasasd",
+              },
+            },
+          },
+        },
+        {
+          e: {
+            t: "script",
+            a: {
+              type: "text/javascript",
+            },
+            b: "alert('This is script element with alert function in body');",
+          },
+        },
+      ];
+      //second collage element
+      let json2 = [
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-2"],
+              id: "mydiv8",
+            },
+            b: {
+              e: {
+                t: "div",
+                a: {
+                  class: ["container", "m-4", "p-4", "text-danger"],
+                  style: ["background-color:yellow;"],
+                  id: "mydiv9",
+                },
+                b: "Second Collage element",
+              },
+            },
+          },
+        },
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-4", "p-4", "text-danger"],
+              style: ["background-color:yellow;"],
+            },
+            b: "No need to add id on",
+          },
+        },
+      ];
+      let test = new Collage("element", json);
+      let test2 = new Collage("element2", json2);
+      test.paint;
+      test2.paint;
+    </script>
+  </body>
+</html>
