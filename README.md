@@ -94,11 +94,17 @@ Element can be javascript as well ie., functions as string will be executed insi
 ## Usage html
 ```html
 <script src="./collagejs.js"></script>
+<body>
+<div id="element"></div>
+<div id="element2"></div>
 <script>
   const Collage = collagejs;
-  let element = new Collage("element", json);
-  element.paint;
+  let el = new Collage("element", json);
+  let el2 = new Collage("element2", json);
+  el.paint;
+  el2.paint;
 </script>
+</body>
 ```
 ## Usage node
 ```javascript
@@ -108,4 +114,5 @@ const Collage = require("./collagejs.js");
 ## Todo
 * element placement before or after
 * element placement on head for dynamic .css and .js
+* add more element binding option aside from id, like class name etc
 * examples and usecases
