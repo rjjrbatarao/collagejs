@@ -26,10 +26,10 @@ You can check example folder for browser or node usage
           },
         },    
     ];
-      let el = new Collage("element", json);
-      let el2 = new Collage("element2", json); // json can be result of axios or mongodb request
-      el.paint;
-      el2.paint;
+    let el = new Collage("element", json);
+    let el2 = new Collage("element2", json); // json can be result of axios or mongodb request
+    el.paint;
+    el2.paint;
   </script>
 </body>
 ```
