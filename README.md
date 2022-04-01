@@ -10,6 +10,36 @@ Collagejs aims to provide frontend a way to interact with database, static .json
 * Frontend from Database (FFD)
 * Super lightweight < 1kb gzipped
 
+## Usage html
+```html
+<script src="./collagejs.js"></script>
+<body>
+<div id="element"></div>
+<div id="element2"></div>
+<script>
+  const Collage = collagejs;
+  var json = {
+    e: {
+            t: "div",
+            a: {
+              class: ["container", "m-4", "p-4", "text-danger"],
+              style: ["background-color:yellow;"],
+            },
+            b: "No need to add id on",      
+    }
+  }
+  let el = new Collage("element", json);
+  let el2 = new Collage("element2", json); // this could be another json 
+  el.paint;
+  el2.paint;
+</script>
+</body>
+```
+## Usage node
+```javascript
+const Collage = require("./collagejs.js");
+```
+
 ## Collagejs JSON format for frontend
 ```
 [
@@ -90,35 +120,6 @@ Element can be javascript as well ie., functions as string will be executed insi
             b: "alert('This is script element with alert function in body');",
           },
         }
-```
-## Usage html
-```html
-<script src="./collagejs.js"></script>
-<body>
-<div id="element"></div>
-<div id="element2"></div>
-<script>
-  const Collage = collagejs;
-  var json = {
-    e: {
-            t: "div",
-            a: {
-              class: ["container", "m-4", "p-4", "text-danger"],
-              style: ["background-color:yellow;"],
-            },
-            b: "No need to add id on",      
-    }
-  }
-  let el = new Collage("element", json);
-  let el2 = new Collage("element2", json); // this could be another json 
-  el.paint;
-  el2.paint;
-</script>
-</body>
-```
-## Usage node
-```javascript
-const Collage = require("./collagejs.js");
 ```
 
 ## Todo
