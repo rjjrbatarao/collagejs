@@ -68,7 +68,7 @@ or another element
 }]
 ```
 Any parent element within nested element must have unique id as attribute like the above example which has id="div1", the final child element may or may not have unique id.
-The first object of the array with no child may or may not have unique id which depend on your code logic refer to the ff.
+The first object of the array with no child may or may not have unique id refer to the ff.
 ```
 [
 {
