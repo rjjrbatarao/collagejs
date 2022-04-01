@@ -53,8 +53,33 @@ basic collagejs element structure, you can add more element object on the array
       any attribute requiring multiple values can be array or single string like class: ["container","mb-2"] or class: "container mb-2"
   b - body where value can be string or element object and can be infinitely nested with another element object
 ```
+## Nesting
+Element nesting is possible inside b key or the body or the element object.
+```html
+[
+        {
+          e: {
+            t: "div",
+            a: {
+              class: "container",
+              id: "div1"
+            },
+            b: {
+              e: {
+                t: "div",
+                a: {
+                  class: "m-2 p-2",
+                },
+                b: "This is the final nested child element",
+              },
+            }
+          },
+        },
+]
+```
+
 ## Functions
-You can also create script element with functions in string as b key value. It will be executed when dom finish building the element
+You can also create script element with functions in string as b value. It will be executed when dom finish building the element.
 ```html
 [
         {
