@@ -8,7 +8,7 @@ Collagejs aims to provide frontend a way to interact with database, static .json
 * Server side templating
 * Direct integration from Firebase, MongoDb, GrapHql, Mysql or any Database that can store json
 * Frontend from Database (FFD)
-* Super lightweight < kb gzipped
+* Super lightweight < 1kb gzipped
 
 ## Collagejs JSON format for frontend
 ```
