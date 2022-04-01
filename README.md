@@ -36,8 +36,8 @@ You can check example folder for browser or node usage
 
 
 ## basic structure
-element structure
-```
+basic collagejs element structure, you can add more element object on the array
+```html
 [{
   e: {
     t: "div"
@@ -47,15 +47,52 @@ element structure
 }]
 ```
 ```
-  e - element 
+  e - element which value composed of keys t, a, and b,
   t - tag where value is any valid html tag ie div,span,ul,script etc
   a - attribute where value is object with any valid html attribute as key, - must be rewritten as _ ie. data-xxx to data_xxx
       any attribute requiring multiple values can be array or single string like class: ["container","mb-2"] or class: "container mb-2"
-  b - body where value can be string or element object
+  b - body where value can be string or element object and can be infinitely nested with another element object
+```
+## Notes
+Final child element on deeply nested element may or may not have any unique id attribute, parent elements must have unique id when body nested with another element object. Check the ff.
+The json object array members are parent elements which may or may not have id when it doesnt have any child elements.
+```html
+      let json2 = [
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-2"],
+              id: "div1",
+            },
+            b: {
+              e: {
+                t: "div",
+                a: {
+                  class: ["container", "m-4", "p-4", "text-danger"],
+                  style: ["background-color:yellow;"],
+                  id: "div2",
+                },
+                b: "Child element",
+              },
+            },
+          },
+        },
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-4", "p-4", "text-danger"],
+              style: ["background-color:yellow;"],
+            },
+            b: "No need to add id on this parent element",
+          },
+        },
+      ];
 ```
 ## Functions
 You can also create script with functions as element. It will be executed when dom finish building the element
-```
+```html
 [
         {
           e: {
