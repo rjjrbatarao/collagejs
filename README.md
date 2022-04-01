@@ -35,7 +35,7 @@ You can check example folder for browser or node usage
 ```
 
 
-## basic structure
+## Basic Json Structure of Element
 basic collagejs element structure, you can add more element object on the array
 ```html
 [{
@@ -53,6 +53,22 @@ basic collagejs element structure, you can add more element object on the array
       any attribute requiring multiple values can be array or single string like class: ["container","mb-2"] or class: "container mb-2"
   b - body where value can be string or element object and can be infinitely nested with another element object
 ```
+## Functions
+You can also create script element with functions in string as b key value. It will be executed when dom finish building the element
+```html
+[
+        {
+          e: {
+            t: "script",
+            a: {
+              type: "text/javascript",
+            },
+            b: "alert('This is script element with alert function in body');",
+          },
+        },
+]
+```
+
 ## Notes
 Final child element on deeply nested element may or may not have any unique id attribute, parent elements must have unique id when body nested with another element object. Check the ff.
 The json object array members are parent elements which may or may not have id when it doesnt have any child elements.
@@ -90,21 +106,7 @@ The json object array members are parent elements which may or may not have id w
         },
       ];
 ```
-## Functions
-You can also create script element with functions in string as b key value. It will be executed when dom finish building the element
-```html
-[
-        {
-          e: {
-            t: "script",
-            a: {
-              type: "text/javascript",
-            },
-            b: "alert('This is script element with alert function in body');",
-          },
-        },
-]
-```
+
 ## Todo
 * options for element placement before after
 * options for element binding instead of just id like classname etc
