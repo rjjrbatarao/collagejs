@@ -91,7 +91,7 @@ The json object array members are parent elements which may or may not have id w
       ];
 ```
 ## Functions
-You can also create script with functions as element. It will be executed when dom finish building the element
+You can also create script element with functions in string as b key value. It will be executed when dom finish building the element
 ```html
 [
         {
