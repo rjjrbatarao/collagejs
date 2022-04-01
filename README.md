@@ -143,6 +143,7 @@ The json object array members are parent elements which may or may not have id w
 * options for element binding instead of just id like classname etc
 * option for adding element dynamically like link or script on document head
 * more use case and examples
+* html to collagejs json object converter
 
 ## License
 MIT License
