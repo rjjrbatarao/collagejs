@@ -22,7 +22,7 @@ You can check example folder for browser or node usage
               class: ["container", "m-4", "p-4", "text-danger"],
               style: ["background-color:yellow;"],
             },
-            b: "No need to add id on",
+            b: "No need to add id attribute when no child element",
           },
         },    
     ];
