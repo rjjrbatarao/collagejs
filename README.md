@@ -1,4 +1,4 @@
-# collagejs
+# CollageJs
 
 ## About
 Collagejs aims to provide frontend a way to interact with database, static .json file or through custom api that returns json. Collagejs makes it possible to create frontend just from a json data. 
