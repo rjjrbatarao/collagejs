@@ -79,3 +79,33 @@ The first object of the array with no child may or may not have unique id refer 
 }
 ]
 ```
+Element can be javascript as well ie., functions as string will be executed inside the body.
+```
+        {
+          e: {
+            t: "script",
+            a: {
+              type: "text/javascript",
+            },
+            b: "alert('This is script element with alert function in body');",
+          },
+        }
+```
+## Usage html
+```html
+<script src="./collagejs.js"></script>
+<script>
+  const Collage = collagejs;
+  let element = new Collage("element", json);
+  element.paint;
+</script>
+```
+## Usage node
+```javascript
+const Collage = require("./collagejs.js");
+```
+
+## Todo
+* element placement before or after
+* element placement on head for dynamic .css and .js
+* examples and usecases
