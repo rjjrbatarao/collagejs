@@ -1,5 +1,5 @@
 # CollageJs
-Json to html builder
+Json to web frontend builder
 
 ## About
 Collagejs builds web frontend from predefined array of json object. The json object can be sourced from static .json file, database, or api returning json. 
