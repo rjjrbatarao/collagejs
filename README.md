@@ -29,7 +29,7 @@ Collagejs aims to provide frontend a way to interact with database, static .json
     }
   }
   let el = new Collage("element", json);
-  let el2 = new Collage("element2", json); // this could be another json 
+  let el2 = new Collage("element2", json); // this could be another json from static file or reponse from axios
   el.paint;
   el2.paint;
 </script>
