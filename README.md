@@ -11,7 +11,7 @@ Collagejs aims to provide frontend a way to interact with database, static .json
 * Super lightweight < kb gzipped
 
 ## Collagejs JSON format for frontend
-```JSON
+```
 [
   e:{
     t: "div",
@@ -37,39 +37,39 @@ a - attribute where value is an onject containing any valid html attribute names
 b - body where value can be string or another collage element e object 
 ```
 ## Key e example
-```json
+```
 [{
   e: {t:"",a:{},b:""}
 }]
 ```
 ## Key t example
-```json
+```
 [{
   e: {t:"div",a:{},b:""}
 }]
 ```
 ## Key a example
-```json
+```
 [{
   e: {t:"div",a:{class:["container","text-primary"],style="background-color:red",hidden:"hidden"},b:""}
 }]
 ```
 ## Key b example
 string body
-```json
+```
 [{
   e: {t:"div",a:{class:["container","text-primary"],style="background-color:red",hidden:"hidden"},b:"This is the body of the element"}
 }]
 ```
 or another element
-```json
+```
 [{
   e: {t:"div",a:{class:["container","text-primary"],style="background-color:red",hidden:"hidden",id="div1"},b:{e: {t:"div",a:{class:["container","text-primary"],style="background-color:red",hidden:"hidden"},b:"This is the body of the 2nd element"}}}
 }]
 ```
 Any parent element within nested element must have unique id as attribute like the above example which has id="div1", the final child element may or may not have unique id.
 The first object of the array with no child may or may not have unique id which depend on your code logic refer to the ff.
-```json
+```
 [
 {
   e: {t:"div",a:{class:["container","text-primary"],style="background-color:red",hidden:"hidden",id="div1"},b:{e: {t:"div",a:{class:["container","text-primary"],style="background-color:red",hidden:"hidden"},b:"This is the body of the 2nd element"}}}
