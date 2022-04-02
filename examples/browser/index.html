@@ -76,12 +76,13 @@
             },
             b: {
               e: {
-                t: "div",
+                t: "button",
                 a: {
-                  class: ["container", "m-2", "p-2", "text-secondary"],
-                  id: "mydiv7",
+                  class: ["btn", "btn-primary"],
+                  onclick: "press()",
+                  id: "buttn1",
                 },
-                b: "testasasd",
+                b: "Click Me",
               },
             },
           },
@@ -93,6 +94,15 @@
               type: "text/javascript",
             },
             b: "alert('This is script element with alert function in body');",
+          },
+        },
+        {
+          e: {
+            t: "script",
+            a: {
+              type: "text/javascript",
+            },
+            b: "function press(){console.log('pressed');test2.rePaint(json3);}",
           },
         },
       ];
@@ -126,6 +136,38 @@
               style: ["background-color:yellow;"],
             },
             b: "No need to add id on",
+          },
+        },
+      ];
+      let json3 = [
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-2"],
+              id: "mydiv10",
+            },
+            b: {
+              e: {
+                t: "div",
+                a: {
+                  class: ["container", "m-4", "p-4", "text-danger"],
+                  style: ["background-color:yellow;"],
+                  id: "mydiv11",
+                },
+                b: "This is a new value",
+              },
+            },
+          },
+        },
+        {
+          e: {
+            t: "div",
+            a: {
+              class: ["container", "m-4", "p-4", "text-danger"],
+              style: ["background-color:yellow;"],
+            },
+            b: "New value set",
           },
         },
       ];

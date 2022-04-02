@@ -1,13 +1,23 @@
 class Collage {
-  constructor(parent_id, data_object = [], source_url = "") {
+  constructor(parent_id, data_object = [], redraw = false) {
     this.parent = parent_id;
     this.data = data_object;
     this.parent_orig = parent_id;
     this.previous_index = 0;
+    this.redraw = redraw;
   }
   get paint() {
     this.traverseObject(this.data, "");
   }
+
+  rePaint(new_data) {
+    var elements = document.getElementById(this.parent_orig);
+    while (elements.hasChildNodes()) {
+      elements.removeChild(elements.firstChild);
+    }
+    this.traverseObject(new_data, "");
+  }
+
   /*
   Element builder for the collagejs json format e,t,a,b keys short for etab
   Create attributes specified in json as 'a' key
