@@ -149,6 +149,9 @@ The json object array members are parent elements which may or may not have id w
         },
       ];
 ```
+## Methods and Getters
+* paint - getter, will build the element on the html document
+* rePaint(new_json) - method, will replace the element with new json object
 
 ## Todo
 * options for element placement before after
