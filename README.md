@@ -2,7 +2,7 @@
 Json to web frontend builder
 
 ## About
-Collagejs builds web frontend from standardized array of json object. The json object can be sourced from static .json file, (mongodb, firebase)database, or api returning json. Collagejs also enables you to serve elements of the html from serveral different servers, it could be from cdn or api's with json response.
+Collagejs builds web frontend from defined array of json object. The json object can be sourced from static .json file, (mongodb, firebase)database, or api returning json. Collagejs also enables you to serve elements of the html from serveral different servers, it could be from cdn or api's with json response.
 
 ## Use Cases
 * Reupdating user interface based on server api response (SSR)
