@@ -11,8 +11,9 @@ Collagejs builds web frontend from standardized array of json object. The json o
 * Html elements can be served on multiple hosting or servers
 * You can reupdate specific element based on user interaction like click or input changes
 * Template engine alternative and crossplatform because its just json object
-* Lazy loading can be implemented per element basis
-* Elements are independently rendered
+* Lazy loading can be implemented per collagejs element
+* Collagejs elements can be rendered one by one respectively
+* Ondemand rendering of collage element like when user scroll or change tab
 
 ## Usage
 You can check example folder for browser or node usage
