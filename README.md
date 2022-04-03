@@ -49,13 +49,15 @@ You can check example folder for browser or node usage
 ## Basic Json Structure of Element
 basic collagejs element structure, you can add more element object on the array
 ```html
-[{
-  e: {
-    t: "div"
-    a: {class=["container","mb-2"],style="background-color:red"},
-    b: "this is body text or can be just another element object" 
-  }
-}]
+[
+    {
+      e: {
+        t: "div"
+        a: {class:["container","mb-2"],style:"background-color:red"},
+        b: "this is body text or can be just another element object" 
+      }
+    },
+]
 ```
 which will be converted to
 ```html
@@ -99,15 +101,15 @@ Element nesting are possible inside b key or the body or the element object.
 You can also create script element with functions in string as b value. It will be executed when dom finish building the element.
 ```html
 [
-        {
-          e: {
-            t: "script",
-            a: {
-              type: "text/javascript",
-            },
-            b: "alert('This is script element with alert function in body');",
-          },
-        },
+     {
+       e: {
+         t: "script",
+         a: {
+           type: "text/javascript",
+         },
+         b: "alert('This is script element with alert function in body');",
+       },
+     },
 ]
 ```
 
