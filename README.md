@@ -48,7 +48,7 @@ You can check example folder for browser or node usage
 
 ## Basic Json Structure of Element
 basic collagejs element structure, you can add more element object on the array
-```html
+```javascript
 [
     {
       e: {
@@ -74,7 +74,7 @@ which will be converted to
 ```
 ## Nesting
 Element nesting are possible inside b key or the body or the element object.
-```html
+```javascript
 [
         {
           e: {
@@ -99,7 +99,7 @@ Element nesting are possible inside b key or the body or the element object.
 
 ## Functions
 You can also create script element with functions in string as b value. It will be executed when dom finish building the element.
-```html
+```javascript
 [
      {
        e: {
@@ -116,7 +116,7 @@ You can also create script element with functions in string as b value. It will 
 ## Notes
 Final child element on deeply nested element may or may not have any unique id attribute, parent elements must have unique id when body nested with another element object. Check the ff.
 The json object array members are parent elements which may or may not have id when it doesnt have any child elements.
-```html
+```javascript
       let json2 = [
         {
           e: {
