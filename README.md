@@ -7,7 +7,7 @@ Collagejs builds web frontend from defined array of json object. The json object
 ## Use Cases
 * Reupdating user interface based on server api response (SSR)
 * Presenting frontend straight from database like mongo or firebase
-* Dynamic injection of javascript functions 
+* Dynamic injection and execution of javascript functions 
 * Html elements can be served on multiple hosting or servers
 * You can reupdate specific element based on user interaction like click or input changes
 * Template engine alternative and crossplatform because its just json object
