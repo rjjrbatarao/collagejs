@@ -1,180 +1,277 @@
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Test CollageJs</title>
-  </head>
-  <link rel="stylesheet" href="./bootstrap.min.css" />
-  <body>
-    <div id="element"></div>
-    <div id="element2"></div>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/starter-template/"
+    />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link href="starter-template.css" rel="stylesheet" />
     <script src="./collagejs.js"></script>
+  </head>
+  <body id="body_id">
     <script>
-      //collage destructor
       const Collage = collagejs;
-      //collage element
-      // collage json format [{e: {t:"",a:{}, b: ""}}]
-      // key e , element, value type json object containing t,a, & b
-      // key t , tag, value string representing any valid html tag
-      // key a, attributes, value is json object
-      let json = [
+      //compare this with https://getbootstrap.com/docs/4.0/examples/starter-template/#
+      let body_json = [
         {
           e: {
-            t: "div",
+            t: "nav",
             a: {
-              class: ["container", "m-2", "text-primary"],
-              style: ["background-color:red;"],
-              data_test: "variable_attribute",
-              id: "mydiv1",
+              class: [
+                "navbar",
+                "navbar-expand-md",
+                "navbar-dark",
+                "bg-dark",
+                "fixed-top",
+              ],
+              id: "nav_1",
             },
-            b: {
-              e: {
-                t: "div",
-                a: {
-                  class: ["container", "m-2", "p-2", "text-secondary"],
-                  id: "mydiv2",
+            b: [
+              {
+                e: {
+                  t: "a",
+                  p: "nav_1",
+                  a: {
+                    class: ["navbar-brand"],
+                    href: "#",
+                  },
+                  b: "Navbar",
                 },
-                b: {
-                  e: {
-                    t: "div",
-                    a: {
-                      class: ["container", "m-2", "p-2", "text-secondary"],
-                      id: "mydiv3",
-                    },
-                    b: {
-                      e: {
-                        t: "div",
-                        a: {
-                          class: ["container", "text-warning"],
-                          style: ["background-color:green;"],
-                          id: "mydiv4",
-                        },
-                        b: "Hello World 1",
+              },
+              {
+                e: {
+                  t: "button",
+                  p: "nav_1",
+                  a: {
+                    class: ["navbar-toggler"],
+                    type: "button",
+                    data_toggle: "collapse",
+                    data_target: "#navbarsExampleDefault",
+                    aria_controls: "navbarsExampleDefault",
+                    aria_expanded: "false",
+                    aria_label: "Toggle navigation",
+                    id: "btn_1",
+                    href: "#",
+                  },
+                  b: {
+                    e: {
+                      t: "span",
+                      a: {
+                        class: ["navbar-toggler-icon"],
                       },
+                      b: "",
                     },
                   },
                 },
               },
-            },
-          },
-        },
-        {
-          e: {
-            t: "div",
-            a: {
-              class: ["container", "m-2", "text-info"],
-              style: ["background-color:blue;"],
-              id: "mydiv5",
-            },
-            b: "hellow world 2",
-          },
-        },
-        {
-          e: {
-            t: "div",
-            a: {
-              class: ["container", "m-2"],
-              id: "mydiv6",
-            },
-            b: {
-              e: {
-                t: "button",
-                a: {
-                  class: ["btn", "btn-primary"],
-                  onclick: "press()",
-                  id: "buttn1",
+              {
+                e: {
+                  t: "div",
+                  p: "nav_1",
+                  a: {
+                    class: ["collapse", "navbar-collapse"],
+                    id: "div_1",
+                  },
+                  b: [
+                    {
+                      e: {
+                        t: "ul",
+                        p: "div_1",
+                        a: {
+                          class: ["navbar-nav mr-auto"],
+                          id: "ul_1",
+                        },
+                        b: [
+                          {
+                            e: {
+                              t: "li",
+                              p: "ul_1",
+                              a: {
+                                class: ["nav-item", "active"],
+                                id: "li_1",
+                              },
+                              b: {
+                                e: {
+                                  t: "a",
+                                  a: {
+                                    class: ["nav-link"],
+                                    id: "a_1",
+                                    href: "#",
+                                  },
+                                  b: "Home",
+                                },
+                              },
+                            },
+                          },
+                          {
+                            e: {
+                              t: "li",
+                              p: "ul_1",
+                              a: {
+                                class: ["nav-item"],
+                                id: "li_2",
+                              },
+                              b: {
+                                e: {
+                                  t: "a",
+                                  a: {
+                                    class: ["nav-link"],
+                                    id: "a_2",
+                                    href: "#",
+                                  },
+                                  b: "Link",
+                                },
+                              },
+                            },
+                          },
+                          {
+                            e: {
+                              t: "li",
+                              p: "ul_1",
+                              a: {
+                                class: ["nav-item"],
+                                id: "li_3",
+                              },
+                              b: {
+                                e: {
+                                  t: "a",
+                                  a: {
+                                    class: ["nav-link", "disabled"],
+                                    id: "a_3",
+                                    href: "#",
+                                  },
+                                  b: "Disabled",
+                                },
+                              },
+                            },
+                          },
+                          {
+                            e: {
+                              t: "li",
+                              p: "ul_1",
+                              a: {
+                                class: ["nav-item", "dropdown"],
+                                id: "li_4",
+                              },
+                              b: {
+                                e: {
+                                  t: "a",
+                                  a: {
+                                    class: ["nav-link", "dropdown-toggle"],
+                                    id: "a_4",
+                                    href: "http://example.com",
+                                    data_toggle: "dropdown",
+                                    aria_haspopup: "true",
+                                    aria_expanded: "false",
+                                  },
+                                  b: "Dropdown",
+                                },
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                    {
+                      e: {
+                        t: "form",
+                        p: "div_1",
+                        a: {
+                          class: ["form-inline", "my-2", "my-lg-0"],
+                          id: "form_1",
+                        },
+                        b: [
+                          {
+                            e: {
+                              t: "input",
+                              p: "form_1",
+                              a: {
+                                class: ["form-control", "mr-sm-2"],
+                                type: "text",
+                                placeholder: "Search",
+                                aria_label: "Search",
+                              },
+                              b: "",
+                            },
+                          },
+                          {
+                            e: {
+                              t: "button",
+                              p: "form_1",
+                              a: {
+                                class: [
+                                  "btn",
+                                  "btn-outline-success",
+                                  "my-2",
+                                  "my-sm-0",
+                                ],
+                                type: "submit",
+                              },
+                              b: "Search",
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
                 },
-                b: "Click Me",
               },
-            },
+            ],
           },
         },
         {
           e: {
-            t: "script",
+            t: "main",
             a: {
-              type: "text/javascript",
+              role: "main",
+              class: "container",
+              id: "main_id",
             },
-            b: "alert('This is script element with alert function in body');",
-          },
-        },
-        {
-          e: {
-            t: "script",
-            a: {
-              type: "text/javascript",
-            },
-            b: "function press(){console.log('pressed');test2.rePaint(json3);}",
+            b: [
+              {
+                e: {
+                  t: "div",
+                  p: "main_id",
+                  a: {
+                    class: "starter-template",
+                    id: "str_id",
+                  },
+                  b: [
+                    {
+                      e: {
+                        t: "h1",
+                        p: "str_id",
+                        a: {}, // case where attribute is empty
+                        b: "Bootstrap starter template",
+                      },
+                    },
+                    {
+                      e: {
+                        t: "p",
+                        p: "str_id",
+                        a: {
+                          class: "lead",
+                        },
+                        b: "Use this document as a way to quickly start any new project.\n All you get is this text and a mostly barebones HTML document.",
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
           },
         },
       ];
-      //second collage element
-      let json2 = [
-        {
-          e: {
-            t: "div",
-            a: {
-              class: ["container", "m-2"],
-              id: "mydiv8",
-            },
-            b: {
-              e: {
-                t: "div",
-                a: {
-                  class: ["container", "m-4", "p-4", "text-danger"],
-                  style: ["background-color:yellow;"],
-                  id: "mydiv9",
-                },
-                b: "Second Collage element",
-              },
-            },
-          },
-        },
-        {
-          e: {
-            t: "div",
-            a: {
-              class: ["container", "m-4", "p-4", "text-danger"],
-              style: ["background-color:yellow;"],
-            },
-            b: "No need to add id on",
-          },
-        },
-      ];
-      let json3 = [
-        {
-          e: {
-            t: "div",
-            a: {
-              class: ["container", "m-2"],
-              id: "mydiv10",
-            },
-            b: {
-              e: {
-                t: "div",
-                a: {
-                  class: ["container", "m-4", "p-4", "text-danger"],
-                  style: ["background-color:yellow;"],
-                  id: "mydiv11",
-                },
-                b: "This is a new value",
-              },
-            },
-          },
-        },
-        {
-          e: {
-            t: "div",
-            a: {
-              class: ["container", "m-4", "p-4", "text-danger"],
-              style: ["background-color:yellow;"],
-            },
-            b: "New value set",
-          },
-        },
-      ];
-      let test = new Collage("element", json);
-      let test2 = new Collage("element2", json2);
-      test.paint;
-      test2.paint;
+      let body_element = new Collage("body_id", body_json);
+      body_element.paint;
     </script>
   </body>
 </html>
