@@ -65,8 +65,10 @@ which will be converted to
   this is body text or can be just another element object
 </div>
 ```
+## Object definition
+Please follow order of each json keys.
 ```
-  e - element - object which value composed of keys t, a, and b,
+  e - element - object which value composed of keys t, p, a, and b,
   t - tag - where value is any valid html tag ie div,span,ul,script etc
   p - parent - element_id where this element will apear as child element
   a - attribute - where value is object with any valid html attribute as key, - must be rewritten as _ ie. data-xxx to data_xxx
