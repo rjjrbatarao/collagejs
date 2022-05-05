@@ -75,7 +75,7 @@ which will be converted to
 ```
 ## Nesting
 Element nesting are possible inside b key or the body or the element object.
-For deeply nested elements please use p key for specifying the parent element where it should be created.
+For deeply nested elements please use p key for specifying the parent element where it should be created, refer to json_2.
 ```javascript
 let json_1 = [
         {
@@ -113,8 +113,18 @@ let json_2 = [
                   p: "div1",
                   a: {
                     class: "m-1 p-1",
+                    id: "div2"
                   },
-                  b: "This is the final nested child element",
+                  b: [
+                    {
+                      e: {
+                        t: "div",
+                        p: "div2"
+                        a:{},
+                        b:"deeply nested element"
+                      }
+                    }
+                  ],
                 },
               },
               {
