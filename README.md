@@ -77,7 +77,7 @@ which will be converted to
 Element nesting are possible inside b key or the body or the element object.
 For deeply nested elements please use p key for specifying the parent element where it should be created.
 ```javascript
-[
+let json_1 = [
         {
           e: {
             t: "div",
@@ -98,7 +98,7 @@ For deeply nested elements please use p key for specifying the parent element wh
         },
 ]
 
-[
+let json_2 = [
         {
           e: {
             t: "div",
