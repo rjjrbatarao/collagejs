@@ -215,7 +215,7 @@ You can still use p key on 2 nested elements but its optional.
 ## License
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2022 collagejs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
