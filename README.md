@@ -162,6 +162,8 @@ You can also create script element with functions in string as b value. It will 
 ## Notes
 Final child element on deeply nested element may or may not have any unique id attribute, parent elements must have unique id when body nested with another element object. Check the ff.
 The json object array members are parent elements which may or may not have id when it doesnt have any child elements.
+When to use p key? simply check nest if its 3 or beyond nested element then use p key, example below does not need p key since theres only 2 nested elements.
+You can still use p key on 2 nested elements but its optional.
 ```javascript
       let json2 = [
         {
