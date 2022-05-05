@@ -34,20 +34,23 @@ class Collage {
           this.parent = attribute_value[index];
         }
         if (attribute_key[index].includes("_")) {
-          var rep_k = attribute_key[index].replace("_", "-"); // for data-*
-          el.setAttribute(rep_k, attribute_value[index]);
+          var replace_key = attribute_key[index].replace("_", "-"); // for data-*
+          el.setAttribute(replace_key, attribute_value[index]);
         } else {
           el.setAttribute(attribute_key[index], attribute_value[index]);
         }
       }
     });
+    if (obj["p"] !== undefined) {
+      parent = obj.p;
+    }
     if (typeof obj.b == "string") {
       el.innerText = obj.b;
     }
     document.getElementById(parent).appendChild(el);
   }
   /*
-  The scanJson was a modified flatten code by Bergi stackoverflow answer in Sept 30 2013
+  The traverseObject was a modified flatten code by Bergi stackoverflow answer in Sept 30 2013
   https://stackoverflow.com/questions/19098797/fastest-way-to-flatten-un-flatten-nested-json-objects
   */
   traverseObject(cur, prop) {
@@ -59,8 +62,8 @@ class Collage {
     } else {
       for (var p in cur) {
         if (p == "t") {
-          var element_index = prop.split(".");
-          var element_index = parseInt(element_index[0]);
+          var element_idx = prop.split(".");
+          var element_index = parseInt(element_idx[0]);
           if (this.previous_index == element_index) {
             this.makeDomElement(this.parent, cur);
           } else {
