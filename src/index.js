@@ -1,15 +1,18 @@
 class Collage {
-  constructor(parent_id, data_object = [], redraw = false) {
+  constructor(parent_id, data_object = []) {
     this.parent = parent_id;
     this.data = data_object;
     this.parent_orig = parent_id;
     this.previous_index = 0;
-    this.redraw = redraw;
   }
   get paint() {
     this.traverseObject(this.data, "");
   }
-
+  /*
+	rebuild element without reload by 
+	specifying the new json, used for 
+	whole json object
+  */  
   rePaint(new_data) {
     var elements = document.getElementById(this.parent_orig);
     while (elements.hasChildNodes()) {
@@ -17,12 +20,23 @@ class Collage {
     }
     this.traverseObject(new_data, "");
   }
-
   /*
-  Element builder for the collagejs json format e,t,a,b keys short for etab
+	rebuild element without reload by 
+	specifying parent id and the new json
+	used for json object parts
+  */  
+  rePaint(parent_id, new_data) {
+    var elements = document.getElementById(parent_id);
+    while (elements.hasChildNodes()) {
+      elements.removeChild(elements.firstChild);
+    }
+    this.traverseObject(new_data, "");
+  }
+  /*
+  Element builder for the collagejs json format e,t,p,a,b keys short for etpab
   Create attributes specified in json as 'a' key
   */
-  makeDomElement(parent, obj) {
+  makeDomElement(parent_id, obj) {
     var attribute_key = Object.keys(obj.a);
     var attribute_value = Object.values(obj.a);
     var el = document.createElement(obj.t);
@@ -42,12 +56,12 @@ class Collage {
       }
     });
     if (obj["p"] !== undefined) {
-      parent = obj.p;
+      parent_id = obj.p;
     }
     if (typeof obj.b == "string") {
       el.innerText = obj.b;
     }
-    document.getElementById(parent).appendChild(el);
+    document.getElementById(parent_id).appendChild(el);
   }
   /*
   The traverseObject was a modified flatten code by Bergi stackoverflow answer in Sept 30 2013
