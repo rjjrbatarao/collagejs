@@ -216,6 +216,11 @@ You can still use p key on 2 nested elements but its optional.
 * more use case and examples
 * html to collagejs json object converter
 
+## Related projects
+```
+https://github.com/moappi/json2html
+```
+
 ## License
 MIT License
 
