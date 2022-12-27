@@ -149,7 +149,7 @@ let json_2 = [
 ]
 ```
 
-## Functions
+## Javascript Functions
 You can also create script element with functions in string as b value. It will be executed when dom finish building the element.
 ```javascript
 [
