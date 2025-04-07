@@ -5,7 +5,7 @@ A lightweight(2kb) Json to web frontend builder. Realtime rendering of html elem
 Collagejs builds web frontend from defined array of json object. The json object can be sourced from static .json file, (mongodb, firebase)database, or api returning json. Collagejs also enables you to serve elements of the html from serveral different servers, it could be from cdn or api's with json response. Collagejs was created to support my development on embedded web page for microcontrollers, this serves as a json to html bridge.
 
 ## Uses
-Plugin system * Dom manipulation via json * Website builder 
+Plugin system * Dom manipulation via json * Website builder * Island architecture * Zero touch dynamic website
 
 ## Demo
 You can open devtools to see the actual code.
